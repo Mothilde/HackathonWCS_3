@@ -2,15 +2,25 @@
 
 namespace HackathonBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * User
  */
-class User
+class User extends BaseUser
 {
+    // CUSTOM CODE
+
+    private $amis;
+    
+    private $vacances;
+
+    // GENERATED CODE
     /**
      * @var int
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -138,5 +148,12 @@ class User
     {
         return $this->ville;
     }
-}
 
+    /* notre code */
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+}

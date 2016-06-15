@@ -1,0 +1,20 @@
+HackathonBundle\Entity\PoidsEtablissements:
+    type: entity
+    table: null
+    repositoryClass: HackathonBundle\Repository\PoidsEtablissementsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        poids:
+            type: integer
+
+
+    oneToOne:
+        etablissement:
+            targetEntity: HackathonBundle\Entity\Etablissements
+            inversedBy: poids
+    lifecycleCallbacks: {  }
