@@ -1,1 +1,5 @@
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8zckqIfHCx7VDYx5EV-L89XJZfzKtsgY&libraries=places"></script>
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('bundles/hackathon/js/googleMap.js') }}"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E&libraries=places"></script>
+{% endblock %}
