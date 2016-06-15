@@ -1,0 +1,23 @@
+HackathonBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: HackathonBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        age:
+            type: integer
+        prenom:
+            type: string
+            length: 255
+        ville:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
