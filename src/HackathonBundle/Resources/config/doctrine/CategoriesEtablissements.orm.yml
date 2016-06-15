@@ -1,0 +1,21 @@
+HackathonBundle\Entity\CategoriesEtablissements:
+    type: entity
+    table: null
+    repositoryClass: HackathonBundle\Repository\CategoriesEtablissementsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        categorie:
+            type: string
+            length: 255
+            unique: true
+
+    oneToMany:
+        etablissement:
+            targetEntity: HackathonBundle\Entity\Etablissements
+            mappedBy: categorie
+    lifecycleCallbacks: {  }

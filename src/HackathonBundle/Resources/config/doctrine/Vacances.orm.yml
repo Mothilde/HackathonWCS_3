@@ -1,7 +1,7 @@
-HackathonBundle\Entity\User:
+HackathonBundle\Entity\Vacances:
     type: entity
     table: null
-    repositoryClass: HackathonBundle\Repository\UserRepository
+    repositoryClass: HackathonBundle\Repository\VacancesRepository
     id:
         id:
             type: integer
@@ -12,29 +12,27 @@ HackathonBundle\Entity\User:
         nom:
             type: string
             length: 255
-        age:
+        dateDepart:
+            type: datetime
+            column: date_depart
+        dateRetour:
+            type: datetime
+            column: date_retour
+        budget:
             type: integer
-        prenom:
-            type: string
-            length: 255
-        ville:
-            type: string
-            length: 255
-
 
     manyToMany:
-        amis:
+        participants:
             targetEntity: HackathonBundle\Entity\User
+            inversedBy: vacances
             joinTable:
-                name: Users_Friends
+                name: Vacances_Participants
                 joinColumns:
-                    user_1:
+                    vacances_id:
                         referencedColumnName: id
                 inverseJoinColumns:
-                    user_2:
+                    user_id:
                         referencedColumnName: id
 
-        vacances:
-            targetEntity: HackathonBundle\Entity\Vacances
-            mappedBy: participants
+
     lifecycleCallbacks: {  }

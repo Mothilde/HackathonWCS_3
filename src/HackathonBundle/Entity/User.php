@@ -7,6 +7,13 @@ namespace HackathonBundle\Entity;
  */
 class User
 {
+    // CUSTOM CODE
+
+    private $amis;
+    
+    private $vacances;
+
+    // GENERATED CODE
     /**
      * @var int
      */
@@ -139,4 +146,3 @@ class User
         return $this->ville;
     }
 }
-
