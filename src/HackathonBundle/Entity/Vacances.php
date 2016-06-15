@@ -144,4 +144,45 @@ class Vacances
     {
         return $this->budget;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->participants = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add participant
+     *
+     * @param \HackathonBundle\Entity\User $participant
+     *
+     * @return Vacances
+     */
+    public function addParticipant(\HackathonBundle\Entity\User $participant)
+    {
+        $this->participants[] = $participant;
+
+        return $this;
+    }
+
+    /**
+     * Remove participant
+     *
+     * @param \HackathonBundle\Entity\User $participant
+     */
+    public function removeParticipant(\HackathonBundle\Entity\User $participant)
+    {
+        $this->participants->removeElement($participant);
+    }
+
+    /**
+     * Get participants
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getParticipants()
+    {
+        return $this->participants;
+    }
 }

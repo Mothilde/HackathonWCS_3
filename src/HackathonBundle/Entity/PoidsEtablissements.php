@@ -86,4 +86,28 @@ class PoidsEtablissements
     {
         return $this->poids;
     }
+
+    /**
+     * Set etablissement
+     *
+     * @param \HackathonBundle\Entity\Etablissements $etablissement
+     *
+     * @return PoidsEtablissements
+     */
+    public function setEtablissement(\HackathonBundle\Entity\Etablissements $etablissement = null)
+    {
+        $this->etablissement = $etablissement;
+
+        return $this;
+    }
+
+    /**
+     * Get etablissement
+     *
+     * @return \HackathonBundle\Entity\Etablissements
+     */
+    public function getEtablissement()
+    {
+        return $this->etablissement;
+    }
 }

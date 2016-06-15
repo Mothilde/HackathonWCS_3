@@ -156,4 +156,72 @@ class User extends BaseUser
         parent::__construct();
         // your own logic
     }
+
+    /**
+     * Add ami
+     *
+     * @param \HackathonBundle\Entity\User $ami
+     *
+     * @return User
+     */
+    public function addAmi(\HackathonBundle\Entity\User $ami)
+    {
+        $this->amis[] = $ami;
+
+        return $this;
+    }
+
+    /**
+     * Remove ami
+     *
+     * @param \HackathonBundle\Entity\User $ami
+     */
+    public function removeAmi(\HackathonBundle\Entity\User $ami)
+    {
+        $this->amis->removeElement($ami);
+    }
+
+    /**
+     * Get amis
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAmis()
+    {
+        return $this->amis;
+    }
+
+    /**
+     * Add vacance
+     *
+     * @param \HackathonBundle\Entity\Vacances $vacance
+     *
+     * @return User
+     */
+    public function addVacance(\HackathonBundle\Entity\Vacances $vacance)
+    {
+        $this->vacances[] = $vacance;
+
+        return $this;
+    }
+
+    /**
+     * Remove vacance
+     *
+     * @param \HackathonBundle\Entity\Vacances $vacance
+     */
+    public function removeVacance(\HackathonBundle\Entity\Vacances $vacance)
+    {
+        $this->vacances->removeElement($vacance);
+    }
+
+    /**
+     * Get vacances
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getVacances()
+    {
+        return $this->vacances;
+    }
 }

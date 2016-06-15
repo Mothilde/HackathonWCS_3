@@ -198,4 +198,28 @@ class Etablissements
     {
         return $this->categorie;
     }
+
+    /**
+     * Set poids
+     *
+     * @param \HackathonBundle\Entity\PoidsEtablissements $poids
+     *
+     * @return Etablissements
+     */
+    public function setPoids(\HackathonBundle\Entity\PoidsEtablissements $poids = null)
+    {
+        $this->poids = $poids;
+
+        return $this;
+    }
+
+    /**
+     * Get poids
+     *
+     * @return \HackathonBundle\Entity\PoidsEtablissements
+     */
+    public function getPoids()
+    {
+        return $this->poids;
+    }
 }
