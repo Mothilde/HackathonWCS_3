@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         <!-- Appel des bibliothèques Bootstrap & Glyphicons -->
@@ -10,7 +11,6 @@
               rel="stylesheet">
         <link href="{{ asset('bundles/hackathon/css/bootstrap-theme.min.css') }}"
               rel="stylesheet">
-
 
         <!-- Appel des bibliothèques CSS -->
         <link href="{{ asset('bundles/hackathon/css/stylesheet.css') }}"
@@ -29,7 +29,7 @@
         <script src="{{ asset('bundles/hackathon/js/bootstrap.min.js') }}"></script>
 
         <!-- Appel de scripts autres -->
-
+        <script src="{{ asset('bundles/hackathon/js/formulairejQuery.js') }}"></script>
 
         {% block javascripts %}{% endblock %}
     </body>
