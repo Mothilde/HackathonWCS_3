@@ -10,4 +10,16 @@ class DefaultController extends Controller
     {
         return $this->render('HackathonBundle:Default:index.html.twig');
     }
+
+    public function resultAction()
+    {
+        // Appel de Doctrine
+        $em = $this->getDoctrine()->getManager();
+
+        
+        $user = $em->getRepository('user')->findAll();
+
+
+        return $this->render('HackathonBundle:Default:result.html.twig');
+    }
 }

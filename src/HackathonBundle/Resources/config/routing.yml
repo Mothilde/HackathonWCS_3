@@ -1,3 +1,7 @@
 hackathon_homepage:
     path:     /
     defaults: { _controller: HackathonBundle:Default:index }
+
+hackathon_result:
+    path:     /result
+    defaults: { _controller: HackathonBundle:Default:result }
