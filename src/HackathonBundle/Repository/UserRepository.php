@@ -10,4 +10,5 @@ namespace HackathonBundle\Repository;
  */
 class UserRepository extends \Doctrine\ORM\EntityRepository
 {
+    
 }

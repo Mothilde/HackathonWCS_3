@@ -18,9 +18,8 @@ class DefaultController extends Controller
 
         
         $infovacances = $em->getRepository('HackathonBundle:Vacances')->findAll();
+        
 
-        var_dump($infovacances);
-
-        return $this->render('HackathonBundle:Default:result.html.twig');
+        return $this->render('HackathonBundle:Default:result.html.twig', array ('infovavances'=>$infovacances));
     }
 }

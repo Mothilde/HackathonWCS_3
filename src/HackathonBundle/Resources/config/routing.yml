@@ -2,6 +2,12 @@ hackathon_homepage:
     path:     /
     defaults: { _controller: HackathonBundle:Default:index }
 
+
 hackathon_result:
     path:     /result
     defaults: { _controller: HackathonBundle:Default:result }
+
+formulaire_vacances:
+    path:     /formulaire
+    defaults: {_controller: HackathonBundle:Vacances:formulaire }
+

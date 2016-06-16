@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         <!-- Appel des bibliothèques Bootstrap & Glyphicons -->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
@@ -10,6 +11,7 @@
               rel="stylesheet">
         <link href="{{ asset('bundles/hackathon/css/bootstrap-theme.min.css') }}"
               rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 
         <!-- Appel des bibliothèques CSS -->
@@ -29,7 +31,6 @@
         <script src="{{ asset('bundles/hackathon/js/bootstrap.min.js') }}"></script>
 
         <!-- Appel de scripts autres -->
-
 
         {% block javascripts %}{% endblock %}
     </body>

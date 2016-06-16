@@ -24,6 +24,11 @@ class Vacances
     private $nom;
 
     /**
+     * @var string
+     */
+    private $lieu;
+
+    /**
      * @var \DateTime
      */
     private $dateDepart;
@@ -143,5 +148,70 @@ class Vacances
     public function getBudget()
     {
         return $this->budget;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->participants = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add participant
+     *
+     * @param \HackathonBundle\Entity\User $participant
+     *
+     * @return Vacances
+     */
+    public function addParticipant(\HackathonBundle\Entity\User $participant)
+    {
+        $this->participants[] = $participant;
+
+        return $this;
+    }
+
+    /**
+     * Remove participant
+     *
+     * @param \HackathonBundle\Entity\User $participant
+     */
+    public function removeParticipant(\HackathonBundle\Entity\User $participant)
+    {
+        $this->participants->removeElement($participant);
+    }
+
+    /**
+     * Get participants
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getParticipants()
+    {
+        return $this->participants;
+    }
+
+    /**
+     * Set lieu
+     *
+     * @param string $lieu
+     *
+     * @return Vacances
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+
+        return $this;
+    }
+
+    /**
+     * Get lieu
+     *
+     * @return string
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
     }
 }

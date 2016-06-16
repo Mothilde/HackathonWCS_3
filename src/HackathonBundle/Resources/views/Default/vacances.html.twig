@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <form id="msform1" action="{{ path('formulaire_vacances') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_start(form) }}
+        <fieldset class="smallbloc">
+        <h2 class="fs-title">Trouver les meilleures offres</h2>
+
+        {{ form_label(form.nom, "Nom :") }}
+        {{ form_errors(form.nom) }}
+        {{ form_widget(form.nom) }}
+
+        {{ form_label(form.lieu, "Lieu :") }}
+        {{ form_errors(form.lieu) }}
+        {{ form_widget(form.lieu) }}
+
+        {{ form_label(form.dateDepart, "Date de départ :") }}
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+        {{ form_errors(form.dateDepart) }}
+        {{ form_widget(form.dateDepart) }}
+
+        {{ form_label(form.dateRetour, "Date de retour : ") }}
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+        {{ form_errors(form.dateRetour) }}
+        {{ form_widget(form.dateRetour) }}
+
+        {{ form_label(form.budget, "Budget :") }}
+        {{ form_errors(form.budget) }}
+        {{ form_widget(form.budget) }}
+
+        {{ form_label(form.participants, "Participants :") }}
+        {{ form_errors(form.participants) }}
+        {{ form_widget(form.participants) }}
+            <br/>
+            <br/>
+
+
+        <input type="submit" name="previous" class="action-button" value="VALIDER"/>
+        </fieldset>
+        {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+    </form>
+
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src ="{{ asset('bundles/hackathon/plugins/bootstrap-datepicker.js') }}"></script>
+    <script type="text/javascript" src ="{{ asset('bundles/hackathon/js/calendrier.js') }}"></script>
+{% endblock %}
+
+
