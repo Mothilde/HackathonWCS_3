@@ -38,4 +38,5 @@ HackathonBundle\Entity\Vacances:
                         referencedColumnName: id
 
 
+
     lifecycleCallbacks: {  }

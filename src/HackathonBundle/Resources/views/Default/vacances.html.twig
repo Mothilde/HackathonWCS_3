@@ -1,4 +1,9 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/hackathon/css/formulaireVacances.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/hackathon/css/googleMaps.css') }}" />
+{% endblock %}
+
 {% block body %}
     <form id="msform1" action="{{ path('formulaire_vacances') }}" method="post" {{ form_enctype(form) }}>
     {{ form_start(form) }}
@@ -40,11 +45,41 @@
     {{ form_end(form) }}
 
     </form>
-
+    <div id="rechercheActivite">
+        <div class="blocRechercheActiviteLeft">
+            <div id="champRecherche">
+                <input type="text" class="" id="searchAutoComplete"/><i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" class="" id="searchPlace"/><i class="fa fa-search" aria-hidden="true"></i>
+                <button id="btnSearch">CLICK ME !!!</button>
+            </div>
+            <div id="APIMeteo">
+                <!-- TODO: API Météo à intégrer -->
+                <p>Bonjour</p>
+            </div>
+            <div id="ajoutActivite">
+                <p>Bonjour</p>
+            </div>
+        </div>
+        <div class="blocRechercheActiviteRight">
+            <div id="map"></div>
+        </div>
+    </div>
 {% endblock %}
 {% block javascripts %}
-    <script type="text/javascript" src ="{{ asset('bundles/hackathon/plugins/bootstrap-datepicker.js') }}"></script>
-    <script type="text/javascript" src ="{{ asset('bundles/hackathon/js/calendrier.js') }}"></script>
+    <script type="text/javascript"
+            src ="{{ asset('bundles/hackathon/plugins/bootstrap-datepicker.js') }}"></script>
+    <script type="text/javascript"
+            src ="{{ asset('bundles/hackathon/js/calendrier.js') }}"></script>
+
+
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E">
+    </script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E&libraries=places"></script>
+
+    <script src="{{ asset('bundles/hackathon/js/googleMap.js') }}"></script>
 {% endblock %}
 
 

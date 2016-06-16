@@ -1,0 +1,20 @@
+.blocRechercheActiviteLeft
+{
+    border: 2px solid black;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.blocRechercheActiviteRight
+{
+    border: 2px solid black;
+    float: right;
+    width: 50%;
+    height: 680px;
+}
+
+#champRecherche, #APIMeteo, #ajoutActivite
+{
+    border: 2px solid black;
+}

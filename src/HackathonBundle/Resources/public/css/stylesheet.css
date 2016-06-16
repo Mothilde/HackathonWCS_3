@@ -25,6 +25,7 @@ fieldset > label {
     margin: 50px auto;
     text-align: center;
     position: relative;
+    display: none;
 }
 
 #msform1 h2 {
