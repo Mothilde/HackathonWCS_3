@@ -21,6 +21,7 @@ class loadUserData extends AbstractFixture
         $newUser1->setFacebook('https://www.facebook.com/merlinlenchanteur');
         $newUser1->setTwitter('https://twitter.com/merlinlenchanteur');
         $newUser1->setAge(20);
+        $newUser1->setPhoto('abc');
         $newUser1->setVille('La Loupe');
         $manager->persist($newUser1);
 
@@ -35,6 +36,7 @@ class loadUserData extends AbstractFixture
         $newUser2->setFacebook('https://www.facebook.com/mathilde.navet.9');
         $newUser2->setTwitter('https://twitter.com/mothilde');
         $newUser2->setAge(30);
+        $newUser2->setPhoto('abc');
         $newUser2->setVille('Lille');
         $manager->persist($newUser2);
 
@@ -49,6 +51,7 @@ class loadUserData extends AbstractFixture
         $newUser3->setFacebook('https://www.facebook.com/mimi');
         $newUser3->setTwitter('https://twitter.com/mimi');
         $newUser3->setAge(32);
+        $newUser3->setPhoto('abc');
         $newUser3->setVille('Chartres');
         $manager->persist($newUser3);
 
@@ -63,6 +66,7 @@ class loadUserData extends AbstractFixture
         $newUser4->setFacebook('https://www.facebook.com/elodie');
         $newUser4->setTwitter('https://twitter.com/elodie');
         $newUser4->setAge(30);
+        $newUser4->setPhoto('abc');
         $newUser4->setVille('Fontainebleau');
         $manager->persist($newUser4);
 
@@ -77,6 +81,7 @@ class loadUserData extends AbstractFixture
         $newUser5->setFacebook('https://www.facebook.com/celine');
         $newUser5->setTwitter('https://twitter.com/celine');
         $newUser5->setAge(26);
+        $newUser5->setPhoto('abc');
         $newUser5->setVille('Nimes');
         $manager->persist($newUser5);
 
@@ -91,6 +96,7 @@ class loadUserData extends AbstractFixture
         $newUser6->setFacebook('https://www.facebook.com/manu');
         $newUser6->setTwitter('https://twitter.com/manu');
         $newUser6->setAge(43);
+        $newUser6->setPhoto('abc');
         $newUser6->setVille('La Loupe');
         $manager->persist($newUser6);
 
