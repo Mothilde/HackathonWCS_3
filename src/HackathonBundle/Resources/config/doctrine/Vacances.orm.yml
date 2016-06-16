@@ -13,10 +13,10 @@ HackathonBundle\Entity\Vacances:
             type: string
             length: 255
         dateDepart:
-            type: datetime
+            type: date
             column: date_depart
         dateRetour:
-            type: datetime
+            type: date
             column: date_retour
         budget:
             type: integer

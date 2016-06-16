@@ -17,8 +17,9 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         
-        $user = $em->getRepository('user')->findAll();
+        $infovacances = $em->getRepository('HackathonBundle:Vacances')->findAll();
 
+        var_dump($infovacances);
 
         return $this->render('HackathonBundle:Default:result.html.twig');
     }

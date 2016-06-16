@@ -11,7 +11,6 @@ namespace HackathonBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use HackathonBundle\Entity\CategoriesEtablissements;
-use HackathonBundle\Entity\User;
 
 class loadCategoriesEtablissements extends AbstractFixture
 {
