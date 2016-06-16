@@ -17,12 +17,18 @@ class VacancesType extends AbstractType
         $builder
             ->add('nom')
             ->add('dateDepart', 'date',array(
-                
+                'widget' => 'single_text',
                 'format' => 'dd-MM-yyyy',
+                'attr' => array(
+                    'class' => 'calendrier'
+                )
             ))
             ->add('dateRetour', 'date', array(
-
+                'widget' => 'single_text',
                 'format' => 'dd-MM-yyyy',
+                'attr' => array(
+                    'class' => 'calendrier'
+                )
             ))
             ->add('budget')
             ->add('participants')
