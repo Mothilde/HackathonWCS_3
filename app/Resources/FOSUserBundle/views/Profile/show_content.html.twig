@@ -1,8 +1,6 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 <div class="fos_user_user_show">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
 </div>
 
 {% block body %}
@@ -39,9 +37,6 @@
         <![endif]-->
     </head>
     <body class="bg-fixed bg-1">
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
     <div class="main-container">
         <div class="main wrapper clearfix">
             <!-- Header Start -->
@@ -86,7 +81,7 @@
                                         {{ user.username }}
                                     </h3>
                                 </div>
-                                
+
                                     <p><span>Prénom :</span>{{ user.prenom }}</p>
                                     <p><span>Nom :</span>{{ user.nom }}</p>
                                     <p><span>Age :</span>{{ user.age }}</p>
