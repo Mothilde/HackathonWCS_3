@@ -17,7 +17,7 @@
         height: 3000px;
     }
 }
-li, a {
+.listeMenuBurger, a {
     margin: 75px 0 -55px 0;
     color: #03A9F4;
     font: 14pt "Roboto", sans-serif;
@@ -29,7 +29,7 @@ li, a {
     outline: 0;
     display: none;
 }
-li {
+.listeMenuBurger {
     width: 230px;
     text-indent: 56px;}
 a:focus {
