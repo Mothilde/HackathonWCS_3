@@ -236,6 +236,7 @@ class User extends BaseUser
     }
 
     /**
+
      * Add ami
      *
      * @param \HackathonBundle\Entity\User $ami

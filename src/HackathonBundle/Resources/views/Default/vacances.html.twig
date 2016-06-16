@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <form action="{{ path('formulaire_vacances') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_start(form) }}
+
+    {{ form(form) }}
+
+        <input type="submit" name="previous" class="action-button" value="ENVOYER"/>
+
+        {{ form_rest(form) }}
+    {{ form_end(form) }}
+    </form>
+
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src ="{{ asset('bundles/hackathon/plugins/bootstrap-datepicker.js') }}"></script>
+    <script type="text/javascript" src ="{{ asset('bundles/hackathon/js/calendrier.js') }}"></script>
+{% endblock %}
+
