@@ -15,6 +15,12 @@ class User extends BaseUser
     private $amis;
     
     private $vacances;
+    
+    private $facebook;
+    
+    private $twitter;
+    
+    private $photo;
 
     // GENERATED CODE
     /**
@@ -155,5 +161,145 @@ class User extends BaseUser
     {
         parent::__construct();
         // your own logic
+    }
+
+    /**
+     * Set facebook
+     *
+     * @param string $facebook
+     *
+     * @return User
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
+    }
+
+    /**
+     * Set twitter
+     *
+     * @param string $twitter
+     *
+     * @return User
+     */
+    public function setTwitter($twitter)
+    {
+        $this->twitter = $twitter;
+
+        return $this;
+    }
+
+    /**
+     * Get twitter
+     *
+     * @return string
+     */
+    public function getTwitter()
+    {
+        return $this->twitter;
+    }
+
+    /**
+     * Set photo
+     *
+     * @param string $photo
+     *
+     * @return User
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Get photo
+     *
+     * @return string
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * Add ami
+     *
+     * @param \HackathonBundle\Entity\User $ami
+     *
+     * @return User
+     */
+    public function addAmi(\HackathonBundle\Entity\User $ami)
+    {
+        $this->amis[] = $ami;
+
+        return $this;
+    }
+
+    /**
+     * Remove ami
+     *
+     * @param \HackathonBundle\Entity\User $ami
+     */
+    public function removeAmi(\HackathonBundle\Entity\User $ami)
+    {
+        $this->amis->removeElement($ami);
+    }
+
+    /**
+     * Get amis
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAmis()
+    {
+        return $this->amis;
+    }
+
+    /**
+     * Add vacance
+     *
+     * @param \HackathonBundle\Entity\Vacances $vacance
+     *
+     * @return User
+     */
+    public function addVacance(\HackathonBundle\Entity\Vacances $vacance)
+    {
+        $this->vacances[] = $vacance;
+
+        return $this;
+    }
+
+    /**
+     * Remove vacance
+     *
+     * @param \HackathonBundle\Entity\Vacances $vacance
+     */
+    public function removeVacance(\HackathonBundle\Entity\Vacances $vacance)
+    {
+        $this->vacances->removeElement($vacance);
+    }
+
+    /**
+     * Get vacances
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getVacances()
+    {
+        return $this->vacances;
     }
 }

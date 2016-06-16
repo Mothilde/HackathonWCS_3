@@ -74,7 +74,7 @@
                         <section class="clearfix">
                             <div class="g2">
                                 <div class="photo">
-                                    <img src="/var/www/html/Cv/images/photocv.png" alt="photo de profil">
+                                    <img src={{ user.photo }} alt="photo de profil">
                                 </div>
                                 <div class="info">
                                     <h3>
@@ -108,7 +108,7 @@
                                     <div class="item-box clearfix">
                                         <i class=""></i>
                                         <div class="item-data">
-                                            <h3><a href="https://github.com/Mothilde" target="_blank">Facebook</a></h3>
+                                            <h3><a {{ user.facebook }} target="_blank">Facebook</a></h3>
                                             <p>Facebook</p>
                                         </div>
                                     </div>
@@ -117,7 +117,7 @@
                                     <div class="item-box clearfix">
                                         <i class="icon-twitter"></i>
                                         <div class="item-data">
-                                            <h3><a href="http://twitter.com/mothilde" target="_blank">@mothilde</a></h3>
+                                            <h3><a href="http://twitter.com/{{ user.twitter }}" target="_blank">@{{ user.twitter }}</a></h3>
                                             <p>Twitter</p>
                                         </div>
                                     </div>

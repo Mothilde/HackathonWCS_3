@@ -163,7 +163,7 @@ body {width: 92%; margin: 0 auto} /* Center page without wrapper */
 /* Backgrounds */
 
 .bg-1{
-    background-image: url("/bundles/framework/images/vacances.jpg");
+    background-color: #ffca28;
 }
 
 /* Header */

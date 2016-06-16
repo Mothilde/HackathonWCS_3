@@ -18,6 +18,8 @@ class loadUserData extends AbstractFixture
         $newUser1->setRoles(array('ROLE_SUPER_ADMIN'));
         $newUser1->setNom('Merlin');
         $newUser1->setPrenom('Thomas');
+        $newUser1->setFacebook('https://www.facebook.com/merlinlenchanteur');
+        $newUser1->setTwitter('https://twitter.com/merlinlenchanteur');
         $newUser1->setAge(20);
         $newUser1->setVille('La Loupe');
         $manager->persist($newUser1);
@@ -30,7 +32,9 @@ class loadUserData extends AbstractFixture
         $newUser2->setRoles(array('ROLE_SUPER_ADMIN'));
         $newUser2->setNom('Navet');
         $newUser2->setPrenom('Mathilde');
-        $newUser2->setAge(32);
+        $newUser2->setFacebook('https://www.facebook.com/mathilde.navet.9');
+        $newUser2->setTwitter('https://twitter.com/mothilde');
+        $newUser2->setAge(30);
         $newUser2->setVille('Lille');
         $manager->persist($newUser2);
 
@@ -42,6 +46,8 @@ class loadUserData extends AbstractFixture
         $newUser3->setRoles(array('ROLE_SUPER_ADMIN'));
         $newUser3->setNom('Chartier');
         $newUser3->setPrenom('Emilie');
+        $newUser3->setFacebook('https://www.facebook.com/mimi');
+        $newUser3->setTwitter('https://twitter.com/mimi');
         $newUser3->setAge(32);
         $newUser3->setVille('Chartres');
         $manager->persist($newUser3);
@@ -54,6 +60,8 @@ class loadUserData extends AbstractFixture
         $newUser4->setRoles(array('ROLE_SUPER_ADMIN'));
         $newUser4->setNom('Dufour');
         $newUser4->setPrenom('Elodie');
+        $newUser4->setFacebook('https://www.facebook.com/elodie');
+        $newUser4->setTwitter('https://twitter.com/elodie');
         $newUser4->setAge(30);
         $newUser4->setVille('Fontainebleau');
         $manager->persist($newUser4);
@@ -66,6 +74,8 @@ class loadUserData extends AbstractFixture
         $newUser5->setRoles(array('ROLE_SUPER_ADMIN'));
         $newUser5->setNom('Langlade');
         $newUser5->setPrenom('Celine');
+        $newUser5->setFacebook('https://www.facebook.com/celine');
+        $newUser5->setTwitter('https://twitter.com/celine');
         $newUser5->setAge(26);
         $newUser5->setVille('Nimes');
         $manager->persist($newUser5);
@@ -78,6 +88,8 @@ class loadUserData extends AbstractFixture
         $newUser6->setRoles(array('ROLE_SUPER_ADMIN'));
         $newUser6->setNom('Martinez');
         $newUser6->setPrenom('Manuel');
+        $newUser6->setFacebook('https://www.facebook.com/manu');
+        $newUser6->setTwitter('https://twitter.com/manu');
         $newUser6->setAge(43);
         $newUser6->setVille('La Loupe');
         $manager->persist($newUser6);

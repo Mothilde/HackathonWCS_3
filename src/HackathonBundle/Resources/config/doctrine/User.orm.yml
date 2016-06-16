@@ -20,6 +20,15 @@ HackathonBundle\Entity\User:
         ville:
             type: string
             length: 255
+        facebook:
+            type: string
+            lenght: 255
+        twitter:
+            type: string
+            lenght: 255
+        photo:
+            type: string
+            lenght: 255
 
 
     manyToMany:
