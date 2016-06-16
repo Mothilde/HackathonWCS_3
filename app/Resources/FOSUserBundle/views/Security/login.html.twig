@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/hackathon/css/carousselHomepage.css') }}" />
+
+        <link rel="stylesheet" href="{{ asset('bundles/hackathon/css/homepage.css') }}" />
+    {% endblock %}
+    {% block body %}
+        <input type="checkbox" id="menu-toggle" />
+        <label id="trigger" for="menu-toggle"></label>
+        <label id="burger" for="menu-toggle"></label>
+        <ul id="menu">
+            <li class="listeMenuBurger"><a href="{{ path('fos_user_security_login') }}">Accueil</a></li>
+            <li class="listeMenuBurger"><a data-toggle="modal" data-target="#myModal" href="#">Se connecter</a></li>
+            <li class="listeMenuBurger"><a href="">A propos !</a></li>
+            <li class="listeMenuBurger"><a href="#">Contact</a></li>
+        </ul>
+        {% include ':includes/homepage:modalConnexion.html.twig' %}
+
+    {% if error %}
+        <div>
+            {{ error.messageKey|trans(error.messageData, 'security') }}
+        </div>
+    {% endif %}
+
+    
+    {% include 'includes/homepage/carousel.html.twig' %}
+
+    {% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('bundles/hackathon/js/carousselHomepage.js') }}" type="text/javascript"></script>
+    <script>
+        $('#menu-toggle').on('click', function(){
+            $('section').hide();
+        })
+    </script>
+{% endblock %}
