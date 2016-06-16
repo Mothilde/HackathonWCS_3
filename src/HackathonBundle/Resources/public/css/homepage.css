@@ -22,7 +22,6 @@ body, html
 {
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 .listeMenuBurger, a {
@@ -168,7 +167,7 @@ video#videoHomepage
 {
     position: fixed; right: 0; bottom: 0;
     min-width: 100%; min-height: 100%;
-    width: auto; height: auto; z-index: -100;
+    width: auto; height: auto; z-index: -30;
     background: url('../img/vacances.jpg') no-repeat;
     background-size: cover;
     opacity: 0.7;
