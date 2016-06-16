@@ -24,6 +24,11 @@ class Vacances
     private $nom;
 
     /**
+     * @var string
+     */
+    private $lieu;
+
+    /**
      * @var \DateTime
      */
     private $dateDepart;
@@ -184,5 +189,29 @@ class Vacances
     public function getParticipants()
     {
         return $this->participants;
+    }
+
+    /**
+     * Set lieu
+     *
+     * @param string $lieu
+     *
+     * @return Vacances
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+
+        return $this;
+    }
+
+    /**
+     * Get lieu
+     *
+     * @return string
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
     }
 }

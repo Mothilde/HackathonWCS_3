@@ -20,5 +20,6 @@ class VacancesController extends Controller
 
     }
 
+
 }
 

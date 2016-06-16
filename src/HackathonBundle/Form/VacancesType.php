@@ -16,6 +16,7 @@ class VacancesType extends AbstractType
     {
         $builder
             ->add('nom')
+            ->add('lieu')
             ->add('dateDepart', 'date',array(
                 'widget' => 'single_text',
                 'format' => 'dd-MM-yyyy',
@@ -30,7 +31,9 @@ class VacancesType extends AbstractType
                     'class' => 'calendrier'
                 )
             ))
-            ->add('budget')
+            ->add('budget', 'money', array(
+                'divisor'=>100,
+            ))
             ->add('participants')
         ;
     }
