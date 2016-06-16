@@ -23,6 +23,8 @@ HackathonBundle\Entity\Vacances:
             column: date_retour
         budget:
             type: integer
+        activites:
+            type: text
 
     manyToMany:
         participants:
@@ -36,7 +38,6 @@ HackathonBundle\Entity\Vacances:
                 inverseJoinColumns:
                     user_id:
                         referencedColumnName: id
-
 
 
     lifecycleCallbacks: {  }

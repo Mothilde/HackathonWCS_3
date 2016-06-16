@@ -9,8 +9,19 @@ class Vacances
 {
     // CUSTOM CODE
 
+    /* Variables relation Doctrine */
+
+    /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     */
     private $participants;
 
+    /**
+     * @var string
+     */
+    private $activites;
+
+    /* Fin variable relation Doctrine */
 
     // GENERATED CODE
     /**
@@ -213,5 +224,29 @@ class Vacances
     public function getLieu()
     {
         return $this->lieu;
+    }
+
+    /**
+     * Set activites
+     *
+     * @param string $activites
+     *
+     * @return Vacances
+     */
+    public function setActivites($activites)
+    {
+        $this->activites = $activites;
+
+        return $this;
+    }
+
+    /**
+     * Get activites
+     *
+     * @return string
+     */
+    public function getActivites()
+    {
+        return $this->activites;
     }
 }

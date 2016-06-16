@@ -39,7 +39,7 @@ if (element) {
         //on effectue la recherche
         service.textSearch({
             location: place.geometry.location,
-            radius: '500',
+            radius: '2500',
             query: req
         }, function(results, status){
             if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -54,7 +54,6 @@ if (element) {
 }
 
 function addMarker(place) {
-
     var marker = new google.maps.Marker({
         map: map,
         position: place.geometry.location,
