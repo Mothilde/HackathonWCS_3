@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/hackathon/css/formulaireVacances.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/hackathon/css/googleMaps.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <form id="msform1" action="{{ path('formulaire_vacances') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_start(form) }}
+        <fieldset class="smallbloc">
+        <h2 class="fs-title">Organisez votre séjour</h2>
+
+        {{ form_label(form.nom, "Nom :") }} {#TODO : trouver un autre nom de label#}
+        {{ form_errors(form.nom) }}
+        {{ form_widget(form.nom) }}
+
+        {{ form_label(form.lieu, "Lieu :") }}
+        {{ form_errors(form.lieu) }}
+        {{ form_widget(form.lieu) }}
+
+        {{ form_label(form.dateDepart, "Date de départ :") }}
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+        {{ form_errors(form.dateDepart) }}
+        {{ form_widget(form.dateDepart) }}
+
+        {{ form_label(form.dateRetour, "Date de retour : ") }}
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+        {{ form_errors(form.dateRetour) }}
+        {{ form_widget(form.dateRetour) }}
+
+        {{ form_label(form.budget, "Budget :") }}
+        {{ form_errors(form.budget) }}
+        {{ form_widget(form.budget) }}
+
+        {{ form_label(form.participants, "Participants :") }}
+        {{ form_errors(form.participants) }}
+        {{ form_widget(form.participants) }}
+            <br/>
+            <br/>
+
+
+        <input type="submit" name="previous" class="action-button" value="VALIDER"/>
+        </fieldset>
+        {{ form_rest(form) }}
+    {{ form_end(form) }}
+
+    </form>
+
+    <div id="rechercheActivite">
+        <div class="blocRechercheActiviteLeft">
+            <h3 id="titreBlocRecherche">Choisir ses activités :</h3>
+            <div class="blockleft">
+            <div id="champRecherche">
+                Ma ville : <input type="text" class="" id="searchAutoComplete"/><i class="fa fa-search" aria-hidden="true"></i><br />
+                Mon activité : <input type="text" class="" id="searchPlace"/><i class="fa fa-search" aria-hidden="true"></i><br />
+                <button id="btnSearch">CLICK ME !!!</button>
+            </div>
+            <div id="APIMeteo">
+                <!-- TODO: API Météo à intégrer -->
+                <p>...</p>
+            </div>
+            <div id="ajoutActivite">
+                <p>...</p>
+            </div>
+        </div>
+        </div>
+        <div class="blocRechercheActiviteRight">
+            <div id="map"></div> <!-- Affichage de la Google Maps -->
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript"
+            src ="{{ asset('bundles/hackathon/plugins/bootstrap-datepicker.js') }}"></script>
+    <script type="text/javascript"
+            src ="{{ asset('bundles/hackathon/js/calendrier.js') }}"></script>
+
+
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E">
+    </script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E&libraries=places"></script>
+
+    <script src="{{ asset('bundles/hackathon/js/googleMap.js') }}"></script>
+    <script src="{{ asset('bundles/hackathon/js/apiMeteo.js') }}"></script>
+{% endblock %}
+
+

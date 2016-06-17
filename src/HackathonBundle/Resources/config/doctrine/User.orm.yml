@@ -1,0 +1,51 @@
+HackathonBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: HackathonBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        age:
+            type: integer
+        prenom:
+            type: string
+            length: 255
+        ville:
+            type: string
+            length: 255
+        facebook:
+            type: string
+            lenght: 255
+        twitter:
+            type: string
+            lenght: 255
+        photo:
+            type: string
+            lenght: 255
+
+
+    manyToMany:
+        amis:
+            targetEntity: HackathonBundle\Entity\User
+            joinTable:
+                name: Users_Friends
+                joinColumns:
+                    user_1:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    user_2:
+                        referencedColumnName: id
+
+        vacances:
+            targetEntity: HackathonBundle\Entity\Vacances
+            mappedBy: participants
+    lifecycleCallbacks: {  }
+
+

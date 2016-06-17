@@ -1,0 +1,80 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+h2 {
+    color: #03A9F4;
+}
+
+fieldset > label {
+    display: block;
+}
+
+#msform1 fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+
+    box-sizing: border-box;
+    width: 100%;
+    /*stacking fieldsets above each other*/
+    position: absolute;
+}
+#msform1 {
+    width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    display: none;
+}
+
+#msform1 h2 {
+    padding-bottom: 10px;
+}
+
+/*Hide all except first fieldset*/
+#msform1 fieldset:not(:first-of-type) {
+    display: none;
+}
+/*inputs*/
+#msform1 input, #msform1 textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px; 
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 13px;
+}
+/*buttons*/
+#msform1 .action-button {
+    width: 100px;
+    background: #03A9F4;
+    color: white;
+    border: 0 none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+}
+#msform1 .action-button:hover, #msform1 .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 5px #27AE60;
+}
+#msform1 fieldset.smallbloc {
+    width: 60%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+ option {
+     width: 405px;
+     text-align: center;
+ }
+
+ body{
+     background-color: #ffca28;
+ }
+
+
+
+
+
