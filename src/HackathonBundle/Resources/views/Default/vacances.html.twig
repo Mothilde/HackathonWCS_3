@@ -47,9 +47,10 @@
     </form>
     <div id="rechercheActivite">
         <div class="blocRechercheActiviteLeft">
+            <h3 id="titreBlocRecherche">Choisir ses activités :</h3>
             <div id="champRecherche">
-                <input type="text" class="" id="searchAutoComplete"/><i class="fa fa-search" aria-hidden="true"></i>
-                <input type="text" class="" id="searchPlace"/><i class="fa fa-search" aria-hidden="true"></i>
+                Ma ville : <input type="text" class="" id="searchAutoComplete"/><i class="fa fa-search" aria-hidden="true"></i><br />
+                Mon activité : <input type="text" class="" id="searchPlace"/><i class="fa fa-search" aria-hidden="true"></i><br />
                 <button id="btnSearch">CLICK ME !!!</button>
             </div>
             <div id="APIMeteo">
@@ -61,7 +62,7 @@
             </div>
         </div>
         <div class="blocRechercheActiviteRight">
-            <div id="map"></div>
+            <div id="map"></div> <!-- Affichage de la Google Maps -->
         </div>
     </div>
 {% endblock %}
@@ -80,6 +81,7 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E&libraries=places"></script>
 
     <script src="{{ asset('bundles/hackathon/js/googleMap.js') }}"></script>
+    <script src="{{ asset('bundles/hackathon/js/apiMeteo.js') }}"></script>
 {% endblock %}
 
 
