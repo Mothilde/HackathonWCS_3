@@ -24,7 +24,6 @@ HackathonBundle\Entity\Vacances:
         budget:
             type: integer
 
-
     manyToMany:
         participants:
             targetEntity: HackathonBundle\Entity\User
@@ -36,6 +35,18 @@ HackathonBundle\Entity\Vacances:
                         referencedColumnName: id
                 inverseJoinColumns:
                     user_id:
+                        referencedColumnName: id
+
+        activites:
+            targetEntity: HackathonBundle\Entity\Activites
+            inversedBy: vacances
+            joinTable:
+                name: Vacances_Activites
+                joinColumns:
+                    vacance_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    activite_id:
                         referencedColumnName: id
 
 

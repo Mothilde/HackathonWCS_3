@@ -1,3 +1,4 @@
+function map(){
 // variables diverses
 var service; //service pour google places
 var place; // pour l'autocomplete stocke le lieu
@@ -28,6 +29,7 @@ if (element) {
             map: map,
             title: place.name
         });
+        console.log(place);
 
         map.setCenter(marker.getPosition()); //centrer la map sur le marker de place
 
@@ -39,7 +41,7 @@ if (element) {
         //on effectue la recherche
         service.textSearch({
             location: place.geometry.location,
-            radius: '2500',
+            radius: '7500',
             query: req
         }, function(results, status){
             if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -51,6 +53,7 @@ if (element) {
         });
 
     });
+}
 }
 
 function addMarker(place) {
@@ -73,7 +76,7 @@ function addMarker(place) {
                 console.error(status);
                 return;
             }
-            infoWindow.setContent("<b>COUCOUC</b> " + result.name); //personnalisable
+            infoWindow.setContent(result.name); //personnalisable
             infoWindow.open(map, marker);
         });
     });

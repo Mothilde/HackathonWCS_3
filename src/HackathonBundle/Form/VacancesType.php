@@ -31,11 +31,9 @@ class VacancesType extends AbstractType
                     'class' => 'calendrier'
                 )
             ))
-            ->add('budget', 'money', array(
-                'divisor'=>100,
-            ))
+            ->add('budget', 'money')
             ->add('participants')
-
+            ->add('activites')
         ;
     }
     

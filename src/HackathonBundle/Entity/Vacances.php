@@ -17,7 +17,7 @@ class Vacances
     private $participants;
 
     /**
-     * @var string
+     * 
      */
     private $activites;
 

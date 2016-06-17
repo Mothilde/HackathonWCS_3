@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
+html, body
+{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #ffca28;
+}
+
 h2 {
     color: #03A9F4;
 }
@@ -8,24 +16,22 @@ fieldset > label {
     display: block;
 }
 
+#msform1 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
 #msform1 fieldset {
     background: white;
     border: 0 none;
     border-radius: 3px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
-
     box-sizing: border-box;
     width: 100%;
     /*stacking fieldsets above each other*/
     position: absolute;
-}
-#msform1 {
-    width: 800px;
-    margin: 50px auto;
-    text-align: center;
-    position: relative;
-    display: none;
 }
 
 #msform1 h2 {
@@ -65,16 +71,8 @@ fieldset > label {
     margin-left: 25%;
     margin-right: 25%;
 }
- option {
+
+option {
      width: 405px;
      text-align: center;
- }
-
- body{
-     background-color: #ffca28;
- }
-
-
-
-
-
+}

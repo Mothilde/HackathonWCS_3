@@ -1,3 +1,9 @@
+#rechercheActivite
+{
+    height: 200px;
+    display: none;
+}
+
 .blocRechercheActiviteLeft
 {
     float: left;
@@ -13,13 +19,13 @@ h3{
 }
 .blockleft{
     padding: 30px;
-
 }
 
 .blocRechercheActiviteRight
 {
     float: right;
     width: 50%;
+    display: inline-block;
     height: 680px;
     margin-right: -10px;
 
@@ -36,4 +42,3 @@ h3{
     margin: 30px;
 
 }
-

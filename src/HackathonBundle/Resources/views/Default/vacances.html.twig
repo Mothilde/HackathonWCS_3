@@ -10,7 +10,7 @@
         <fieldset class="smallbloc">
         <h2 class="fs-title">Organisez votre séjour</h2>
 
-        {{ form_label(form.nom, "Nom :") }} {#TODO : trouver un autre nom de label#}
+        {{ form_label(form.nom, "Nom :") }}
         {{ form_errors(form.nom) }}
         {{ form_widget(form.nom) }}
 
@@ -37,46 +37,44 @@
         {{ form_widget(form.participants) }}
             <br/>
             <br/>
+            <input type="button" name="next" class="next action-button boutonSuivant" value="Suivant"/>
 
-
-        <input type="submit" name="previous" class="action-button" value="VALIDER"/>
         </fieldset>
-        {{ form_rest(form) }}
-    {{ form_end(form) }}
 
-    </form>
+
 
     <div id="rechercheActivite">
+
         <div class="blocRechercheActiviteLeft">
-            <h3 id="titreBlocRecherche">Choisir ses activités :</h3>
             <div class="blockleft">
             <div id="champRecherche">
-                Ma ville : <input type="text" class="" id="searchAutoComplete"/><i class="fa fa-search" aria-hidden="true"></i><br />
-                Mon activité : <input type="text" class="" id="searchPlace"/><i class="fa fa-search" aria-hidden="true"></i><br />
-                <button id="btnSearch">CLICK ME !!!</button>
+                <i class="fa fa-search" aria-hidden="true"></i>Ma ville : <input type="text" class="" id="searchAutoComplete"/><br />
+                <i class="fa fa-search" aria-hidden="true"></i>Mon activité : <input type="text" class="" id="searchPlace" /><br />
+                <input id="btnSearch" type="button" name="next" class="action-button boutonSuivant" value="Rechercher   "/>
+
             </div>
             <div id="APIMeteo">
                 <!-- TODO: API Météo à intégrer -->
-                <p>...</p>
             </div>
             <div id="ajoutActivite">
-                <p>...</p>
+                {{ form_end(form) }}
+                <input type="submit" name="previous" class="action-button" value="VALIDER"/>
             </div>
         </div>
-        </div>
+    </form>
+    </div>
+
         <div class="blocRechercheActiviteRight">
             <div id="map"></div> <!-- Affichage de la Google Maps -->
         </div>
     </div>
+
 {% endblock %}
 {% block javascripts %}
     <script type="text/javascript"
             src ="{{ asset('bundles/hackathon/plugins/bootstrap-datepicker.js') }}"></script>
     <script type="text/javascript"
             src ="{{ asset('bundles/hackathon/js/calendrier.js') }}"></script>
-
-
-
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E">
     </script>
@@ -84,7 +82,23 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E&libraries=places"></script>
 
     <script src="{{ asset('bundles/hackathon/js/googleMap.js') }}"></script>
-    <script src="{{ asset('bundles/hackathon/js/apiMeteo.js') }}"></script>
+    <script>
+        var lieuVacances = $('#vacances_lieu');
+        var lieuRechercheGoogleMaps = $('#searchAutoComplete');
+
+        lieuVacances.change(function(){
+            lieuRechercheGoogleMaps.val(lieuVacances.val());
+            console.log(lieuRechercheGoogleMaps.val());
+        });
+
+        $('.boutonSuivant').click(function(){
+            $('.smallbloc').hide();
+            map();
+            $('#rechercheActivite').show();
+        });
+        
+        $('#btnSearch').getPreventDefault();
+    </script>
 {% endblock %}
 
 
