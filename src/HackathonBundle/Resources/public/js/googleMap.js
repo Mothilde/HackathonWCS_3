@@ -1,17 +1,20 @@
-function map(){
-// variables diverses
 var service; //service pour google places
 var place; // pour l'autocomplete stocke le lieu
-var mapOptions = {
-    center: {lat: 48.471285, lng: 1.0143050000000358},
-    zoom: 13,
-    scrollwheel: false
-}; // point par défaut
+var map;
+function map() {
+// variables diverses
+
+    var mapOptions = {
+        center: {lat: 48.471285, lng: 1.0143050000000358},
+        zoom: 13,
+        scrollwheel: false
+    }; // point par défaut
 
 
 // déclaration de la map et lien avec l'element map de notre vue
-var map = new google.maps.Map(document.getElementById('map'),
-    mapOptions);
+    map = new google.maps.Map(document.getElementById('map'),
+        mapOptions);
+}
 
 var element = document.getElementById('searchAutoComplete'); //input pour la recherche du lieux autocomplete
 if (element) {
@@ -53,7 +56,7 @@ if (element) {
         });
 
     });
-}
+
 }
 
 function addMarker(place) {
