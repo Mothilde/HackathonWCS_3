@@ -6,26 +6,41 @@
 
 .blocRechercheActiviteLeft
 {
-    border: 2px solid black;
     float: left;
     width: 50%;
     height: 100%;
+    background-color: #03A9F4;
+    margin-top: 120px;
+    border-radius: 10px;
 
+}
+
+h3{
+
+    margin:-15px
+}
+.blockleft{
+    padding: 30px;
 }
 
 .blocRechercheActiviteRight
 {
-    border: 2px solid black;
     float: right;
     width: 50%;
-    height: 100%;
     display: inline-block;
+    height: 680px;
+    margin-right: -10px;
+
 }
 
-#champRecherche, #APIMeteo, #ajoutActivite
+#titreBlocRecherche
 {
-    border: 2px solid black;
+    text-align: center;
 }
 
+#btnSearch
+{
+    float: right;
+    margin: 30px;
 
-
+}

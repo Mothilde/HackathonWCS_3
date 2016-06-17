@@ -43,16 +43,19 @@
     <div id="rechercheActivite">
 
         <div class="blocRechercheActiviteLeft">
+            <h3 id="titreBlocRecherche">Choisir ses activités :</h3>
+            <div class="blockleft">
             <div id="champRecherche">
-                <input type="text" class="" id="searchAutoComplete"/><i class="fa fa-search" aria-hidden="true"></i>
-                <input type="text" class="" id="searchPlace"/><i class="fa fa-search" aria-hidden="true"></i>
+                Ma ville : <input type="text" class="" id="searchAutoComplete"/><i class="fa fa-search" aria-hidden="true"></i><br />
+                Mon activité : <input type="text" class="" id="searchPlace"/><i class="fa fa-search" aria-hidden="true"></i><br />
                 <button id="btnSearch">CLICK ME !!!</button>
             </div>
             <div id="APIMeteo">
                 <!-- TODO: API Météo à intégrer -->
-                <p>Bonjour</p>
+                <p>...</p>
             </div>
             <div id="ajoutActivite">
+
                 {{ form_label(form.activites, 'Liste des activités') }}
                 {{ form_errors(form.activites) }}
                 {{ form_widget(form.activites) }}
@@ -65,7 +68,7 @@
     {{ form_rest(form) }}
         {{ form_end(form) }}
         <div class="blocRechercheActiviteRight">
-            <div id="map"></div>
+            <div id="map"></div> <!-- Affichage de la Google Maps -->
         </div>
     </div>
 
@@ -95,6 +98,9 @@
             $('.smallbloc').hide();
         });
     </script>
+
+    <script src="{{ asset('bundles/hackathon/js/apiMeteo.js') }}"></script>
+
 {% endblock %}
 
 
