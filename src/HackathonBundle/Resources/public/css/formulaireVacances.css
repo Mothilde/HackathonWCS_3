@@ -4,6 +4,18 @@
     width: 50%;
     height: 100%;
     background-color: #03A9F4;
+    margin-top: 120px;
+    border-radius: 10px;
+
+}
+
+h3{
+
+    margin:-15px
+}
+.blockleft{
+    padding: 30px;
+
 }
 
 .blocRechercheActiviteRight
@@ -11,6 +23,8 @@
     float: right;
     width: 50%;
     height: 680px;
+    margin-right: -10px;
+
 }
 
 #titreBlocRecherche
@@ -21,5 +35,7 @@
 #btnSearch
 {
     float: right;
-    margin-right: 30px;
+    margin: 30px;
+
 }
+
