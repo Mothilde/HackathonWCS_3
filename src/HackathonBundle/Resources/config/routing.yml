@@ -4,4 +4,8 @@ hackathon_homepage:
 
 formulaire_vacances:
     path: /formulaire
-    defaults: {_controller: HackathonBundle:Vacances:formulaire }
+    defaults: { _controller: HackathonBundle:Vacances:formulaire }
+
+hackathon_mesvacances:
+    path: /mesvacances
+    defaults: { _controller: HackathonBundle:Default:getVacances }
