@@ -1,7 +1,15 @@
+hackathon_profile:
+    resource: "@HackathonBundle/Resources/config/routing/user.yml"
+    prefix:   /profile
+
 hackathon_homepage:
     path:     /
     defaults: { _controller: HackathonBundle:Default:index }
 
 formulaire_vacances:
     path: /formulaire
-    defaults: {_controller: HackathonBundle:Vacances:formulaire }
+    defaults: { _controller: HackathonBundle:Vacances:formulaire }
+
+hackathon_mesvacances:
+    path: /mesvacances
+    defaults: { _controller: HackathonBundle:Default:getVacances }

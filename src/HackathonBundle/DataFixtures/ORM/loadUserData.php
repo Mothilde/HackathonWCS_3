@@ -21,7 +21,7 @@ class loadUserData extends AbstractFixture
         $newUser1->setFacebook('https://www.facebook.com/merlinlenchanteur');
         $newUser1->setTwitter('https://twitter.com/merlinlenchanteur');
         $newUser1->setAge(20);
-        $newUser1->setPhoto('abc');
+        $newUser1->setPhoto('http://img15.hostingpics.net/thumbs/mini_285149thomas.jpg');
         $newUser1->setVille('La Loupe');
         $manager->persist($newUser1);
 
@@ -36,7 +36,7 @@ class loadUserData extends AbstractFixture
         $newUser2->setFacebook('https://www.facebook.com/mathilde.navet.9');
         $newUser2->setTwitter('https://twitter.com/mothilde');
         $newUser2->setAge(30);
-        $newUser2->setPhoto('abc');
+        $newUser2->setPhoto('http://img15.hostingpics.net/thumbs/mini_254347mathilde.jpg');
         $newUser2->setVille('Lille');
         $manager->persist($newUser2);
 
@@ -51,7 +51,7 @@ class loadUserData extends AbstractFixture
         $newUser3->setFacebook('https://www.facebook.com/mimi');
         $newUser3->setTwitter('https://twitter.com/mimi');
         $newUser3->setAge(32);
-        $newUser3->setPhoto('abc');
+        $newUser3->setPhoto('http://img15.hostingpics.net/thumbs/mini_675367emilie.jpg');
         $newUser3->setVille('Chartres');
         $manager->persist($newUser3);
 
@@ -96,7 +96,7 @@ class loadUserData extends AbstractFixture
         $newUser6->setFacebook('https://www.facebook.com/manu');
         $newUser6->setTwitter('https://twitter.com/manu');
         $newUser6->setAge(43);
-        $newUser6->setPhoto('abc');
+        $newUser6->setPhoto('http://img15.hostingpics.net/thumbs/mini_771138manu.jpg');
         $newUser6->setVille('La Loupe');
         $manager->persist($newUser6);
 
