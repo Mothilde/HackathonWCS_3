@@ -3,9 +3,9 @@
     <form id="msform1" action="{{ path('formulaire_vacances') }}" method="post" {{ form_enctype(form) }}>
     {{ form_start(form) }}
         <fieldset class="smallbloc">
-        <h2 class="fs-title">Trouver les meilleures offres</h2>
+        <h2 class="fs-title">Organisez votre séjour</h2>
 
-        {{ form_label(form.nom, "Nom :") }}
+        {{ form_label(form.nom, "Nom :") }} {#TODO : trouver un autre nom de label#}
         {{ form_errors(form.nom) }}
         {{ form_widget(form.nom) }}
 
