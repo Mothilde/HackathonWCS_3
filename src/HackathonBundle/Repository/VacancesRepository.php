@@ -10,4 +10,11 @@ namespace HackathonBundle\Repository;
  */
 class VacancesRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getVacances()
+    {
+        $queryBuilder = $this->createQueryBuilder('vacances');
+        $queryBuilder->select('vacances.id');
+        
+        return $queryBuilder->getQuery()->getResult();
+    }
 }

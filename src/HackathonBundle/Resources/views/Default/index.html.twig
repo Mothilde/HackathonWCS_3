@@ -3,15 +3,6 @@
         <link rel="stylesheet" href="{{ asset('bundles/hackathon/css/homepage.css') }}" />
     {% endblock %}
     {% block body %}
-<input type="checkbox" id="menu-toggle" />
-<label id="trigger" for="menu-toggle"></label>
-<label id="burger" for="menu-toggle"></label>
-<ul id="menu">
-    <li class="listeMenuBurger"><a href="{{ path('hackathon_homepage') }}">Accueil</a></li>
-    <li class="listeMenuBurger"><a data-toggle="modal" data-target="#myModal" href="#">Se connecter</a></li>
-    <li class="listeMenuBurger"><a href="{{ path('fos_user_security_login') }}">A propos !</a></li>
-    <li class="listeMenuBurger"><a href="#">Contact</a></li>
-</ul>
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
