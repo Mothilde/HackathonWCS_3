@@ -1,3 +1,7 @@
+hackathon_user:
+    resource: "@HackathonBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
 hackathon_homepage:
     path:     /
     defaults: { _controller: HackathonBundle:Default:index }
