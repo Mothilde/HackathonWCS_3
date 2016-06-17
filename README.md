@@ -21,9 +21,17 @@ Après avoir cloné le projet, réaliser les commandes suivantes:
 * php app/console doctrine:schema:create
 * php app/console doctrine:fixtures:load
 * php app/console assets:install --symlink web
-* 
+
+#ENVIRONNEMENT TECHNIQUE
+* Api Google Map
+* Synfony 2
+* MySQL
+* PhpMyAdmin
+* Github
+* jQuery
 
 
 
 
-Troisième Hackathon de la WCS | Réalisé par : Thomas, Mathilde, Emilie et Elodie
+
+Hackathon de la WCS | Réalisé par : Thomas, Mathilde, Emilie et Elodie
