@@ -32,7 +32,6 @@ if (element) {
             map: map,
             title: place.name
         });
-        console.log(place);
 
         map.setCenter(marker.getPosition()); //centrer la map sur le marker de place
 

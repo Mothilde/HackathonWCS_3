@@ -53,7 +53,7 @@
                 <input id="btnSearch" type="button" name="next" class="action-button boutonSuivant" value="Rechercher   "/>
 
             </div>
-            <div id="APIMeteo">
+            <div id="Weather">
                 <!-- TODO: API Météo à intégrer -->
             </div>
             <div id="ajoutActivite">
@@ -82,6 +82,7 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E&libraries=places"></script>
 
     <script src="{{ asset('bundles/hackathon/js/googleMap.js') }}"></script>
+    <script src="{{ asset('bundles/hackathon/js/apiMeteo.js') }}"></script>
     <script>
         var lieuVacances = $('#vacances_lieu');
         var lieuRechercheGoogleMaps = $('#searchAutoComplete');
