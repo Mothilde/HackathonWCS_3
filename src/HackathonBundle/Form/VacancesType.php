@@ -35,7 +35,7 @@ class VacancesType extends AbstractType
                 'divisor'=>100,
             ))
             ->add('participants')
-
+            ->add('activites')
         ;
     }
     

@@ -17,6 +17,14 @@
         height: 3000px;
     }
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
 li, a {
     margin: 75px 0 -55px 0;
     color: #03A9F4;
@@ -31,7 +39,9 @@ li, a {
 }
 li {
     width: 230px;
-    text-indent: 56px;}
+    text-indent: 56px;
+}
+
 a:focus {
     display: block;
     color: #333;
@@ -63,13 +73,7 @@ h4 {
     font-weight: lighter;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #03A9F4;
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
-}
+
 
 #trigger, #burger, #burger:before, #burger:after {
     position: absolute;

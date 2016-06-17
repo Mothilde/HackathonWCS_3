@@ -1,0 +1,24 @@
+HackathonBundle\Entity\Activites:
+    type: entity
+    table: null
+    repositoryClass: HackathonBundle\Repository\ActivitesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomActivite:
+            type: string
+            length: 255
+        texteActivite:
+            type: string
+            length: 255
+
+
+    manyToMany:
+        vacances:
+            targetEntity: HackathonBundle\Entity\Vacances
+            mappedBy: activites
+    lifecycleCallbacks: {  }

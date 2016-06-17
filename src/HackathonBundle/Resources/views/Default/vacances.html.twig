@@ -10,7 +10,7 @@
         <fieldset class="smallbloc">
         <h2 class="fs-title">Organisez votre séjour</h2>
 
-        {{ form_label(form.nom, "Nom :") }} {#TODO : trouver un autre nom de label#}
+        {{ form_label(form.nom, "Nom :") }}
         {{ form_errors(form.nom) }}
         {{ form_widget(form.nom) }}
 
@@ -37,15 +37,11 @@
         {{ form_widget(form.participants) }}
             <br/>
             <br/>
+            <input type="button" name="next" class="next action-button boutonSuivant" value="Suivant"/>
 
-
-        <input type="submit" name="previous" class="action-button" value="VALIDER"/>
         </fieldset>
-        {{ form_rest(form) }}
-    {{ form_end(form) }}
-
-    </form>
     <div id="rechercheActivite">
+
         <div class="blocRechercheActiviteLeft">
             <div id="champRecherche">
                 <input type="text" class="" id="searchAutoComplete"/><i class="fa fa-search" aria-hidden="true"></i>
@@ -57,22 +53,28 @@
                 <p>Bonjour</p>
             </div>
             <div id="ajoutActivite">
-                <p>Bonjour</p>
+                {{ form_label(form.activites, 'Liste des activités') }}
+                {{ form_errors(form.activites) }}
+                {{ form_widget(form.activites) }}
+                <input type="submit" name="previous" class="action-button" value="VALIDER"/>
             </div>
         </div>
+    </form>
+    </div>
+
+    {{ form_rest(form) }}
+        {{ form_end(form) }}
         <div class="blocRechercheActiviteRight">
             <div id="map"></div>
         </div>
     </div>
+
 {% endblock %}
 {% block javascripts %}
     <script type="text/javascript"
             src ="{{ asset('bundles/hackathon/plugins/bootstrap-datepicker.js') }}"></script>
     <script type="text/javascript"
             src ="{{ asset('bundles/hackathon/js/calendrier.js') }}"></script>
-
-
-
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E">
     </script>
@@ -80,6 +82,19 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7_au4kCmE4z4KuTD8HPkqjp-qSmgab5E&libraries=places"></script>
 
     <script src="{{ asset('bundles/hackathon/js/googleMap.js') }}"></script>
+    <script>
+        var lieuVacances = $('#vacances_lieu');
+        var lieuRechercheGoogleMaps = $('#searchAutoComplete');
+
+        lieuVacances.change(function(){
+            lieuRechercheGoogleMaps.val(lieuVacances.val());
+            console.log(lieuRechercheGoogleMaps.val());
+        });
+
+        $('.boutonSuivant').click(function(){
+            $('.smallbloc').hide();
+        });
+    </script>
 {% endblock %}
 
 
