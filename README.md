@@ -1,10 +1,10 @@
-# HackathonWCS_3 sur une durée de 48h
-Troisième Hackathon de la WCS | Réalisé par : Thomas, Mathilde, Emilie et Elodie
+#HackathonWCS_3 sur une durée de 48h
+###Troisième Hackathon de la WCS | Réalisé par : Thomas, Mathilde, Emilie et Elodie
 =======
 #Project Name : Onecho
 
 #TODO
-Réaliser une application qui permet de préparer ses vacances entre amis en respectant son budget :
+###Réaliser une application qui permet de préparer ses vacances entre amis en respectant son budget :
 
 
 #REALISATION
