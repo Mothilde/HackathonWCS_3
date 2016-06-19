@@ -1,8 +1,7 @@
-# HackathonWCS_3
+# HackathonWCS_3 sur une durée de 48h
 Troisième Hackathon de la WCS | Réalisé par : Thomas, Mathilde, Emilie et Elodie
 =======
 #Project Name : Onecho
-### HackathonWCS_3 sur une durée de 48h
 
 #TODO
 Réaliser une application qui permet de préparer ses vacances entre amis en respectant son budget :
@@ -27,11 +26,9 @@ Après avoir cloné le projet, réaliser les commandes suivantes:
 * Synfony 2
 * MySQL
 * PhpMyAdmin
-* Github
+* Git/Github
 * jQuery
 
 
 
 
-
-Hackathon de la WCS | Réalisé par : Thomas, Mathilde, Emilie et Elodie
